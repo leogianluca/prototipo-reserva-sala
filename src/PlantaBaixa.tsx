@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import {
   Box,
   Typography,
@@ -42,7 +42,6 @@ interface PlantaProps {
 
 const PlantaBaixaSimetricaAjustada = ({
   onRoomSelect,
-  externalOpenRoom,
   onAllReservationsUpdate,
 }: PlantaProps) => {
   const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
@@ -50,7 +49,7 @@ const PlantaBaixaSimetricaAjustada = ({
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const [_mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
   const [selectedDay, setSelectedDay] = useState<Dayjs>(dayjs());
   const [selectedHour, setSelectedHour] = useState<number | null>(null);

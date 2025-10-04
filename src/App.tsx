@@ -3,9 +3,9 @@ import { Box, Typography, Button, Paper } from "@mui/material";
 import PlantaBaixa from "./PlantaBaixa";
 
 export default function App() {
-  const [zoomLevel, setZoomLevel] = useState(100);
-  const [selectedRoomLabel, setSelectedRoomLabel] = useState<string | null>(null);
-  const [selectedRoomReservations, setSelectedRoomReservations] = useState(
+  const [zoomLevel, _setZoomLevel] = useState(100);
+  const [_selectedRoomLabel, setSelectedRoomLabel] = useState<string | null>(null);
+  const [_selectedRoomReservations, setSelectedRoomReservations] = useState(
     [] as Array<{ funcionario?: string | null; inicio?: Date | null; fim?: Date | null }>
   );
   const [externalOpenRoom, setExternalOpenRoom] = useState<string | null>(null);
