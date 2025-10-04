@@ -1,0 +1,89 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Forçar tema claro por padrão (evita fundo escuro que tornava o layout pesado) */
+  color-scheme: light;
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  /* Garante que o body use 100% da altura da janela */
+  min-height: 100vh;
+  height: 100%;
+
+  display: block;
+  min-width: 320px;
+  background-color: #ffffff; /* garante fundo branco por padrão */
+  color: #213547;
+}
+
+/* Novo estilo para o App.jsx ocupar o resto da tela */
+#root {
+  /* Assumindo que seu React está montado em um div com id="root" */
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo para a tag h1 ser pequena e não atrapalhar o mapa */
+h1 {
+  font-size: 1.5em; /* Reduz o tamanho do título */
+  line-height: 1.1;
+  padding: 10px;
+  color: #213547;
+  background-color: transparent;
+  margin: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
